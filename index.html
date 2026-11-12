@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7th Standard English - Part 1 & Part 2 Complete Curriculum Portal</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border-color: #cbd5e1;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 12px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        h1 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .header-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            background: #f1f5f9;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 4px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background: white;
+            box-sizing: border-box;
+        }
+        .selector-box {
+            background: #eff6ff;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px dashed var(--secondary);
+            text-align: center;
+        }
+        .selector-box select {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--secondary);
+            width: 70%;
+            max-width: 400px;
+            background: white;
+            font-weight: 600;
+        }
+        .action-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover { background-color: #1d4ed8; }
+        button.secondary { background-color: #475569; }
+        button.success { background-color: #16a34a; }
+        
+        .panel {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .panel.active { display: block; }
+        h2 { font-size: 1.2rem; color: var(--primary); border-left: 4px solid var(--secondary); padding-left: 8px; margin-top: 0; }
+        h3 { font-size: 1.05rem; color: #334155; margin-top: 16px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9rem; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; vertical-align: top; }
+        th { background-color: #f8fafc; }
+        
+        @keyframes colorBlink {
+            0% { color: #2563eb; }
+            25% { color: #dc2626; }
+            50% { color: #16a34a; }
+            75% { color: #9333ea; }
+            100% { color: #ea580c; }
+        }
+        .credits-footer {
+            margin-top: 30px;
+            padding: 16px;
+            background: #f8fafc;
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 0 0 12px 12px;
+            animation: colorBlink 3s infinite;
+        }
+        .sub-credit {
+            font-size: 0.85rem;
+            margin-top: 6px;
+            display: block;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; max-width: 100%; }
+            .header-form, .selector-box, .action-bar, button { display: none !important; }
+            .panel { display: block !important; border: none; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Karnataka DSERT Curriculum Portal (Part 1 & Part 2)</h1>
+    <div class="subtitle">7th Standard English Second Language &bull; Complete Chapters Toolkit</div>
+
+    <!-- Data Entry Header Form -->
+    <div class="header-form">
+        <div class="form-group">
+            <label>School Name:</label>
+            <input type="text" id="schoolName" value="GHPS Tammadihalli">
+        </div>
+        <div class="form-group">
+            <label>Teacher Name:</label>
+            <input type="text" id="teacherName" value="Lakshmikanth R">
+        </div>
+        <div class="form-group">
+            <label>Cluster:</label>
+            <input type="text" id="clusterName" value="Tammadihalli">
+        </div>
+        <div class="form-group">
+            <label>Taluk Name:</label>
+            <input type="text" id="talukName" value="C N Halli">
+        </div>
+    </div>
+
+    <!-- Chapter Dropdown Selector -->
+    <div class="selector-box">
+        <label for="chapterSelect" style="display:block; font-weight:600; margin-bottom:8px; color:#1e3a8a;">Select Chapter / Unit (Part 1 & Part 2):</label>
+        <select id="chapterSelect" onchange="loadChapterContent()">
+            <option value="">-- Choose Chapter --</option>
+            <optgroup label="PART 1 TEXTBOOK">
+                <option value="unit1">Unit 1: Portrait of a Hero</option>
+                <option value="unit2">Unit 2: The Proud Flowers</option>
+                <option value="unit3">Unit 3: The Emperor's New Clothes</option>
+                <option value="unit4">Unit 4: The Miller of Dee</option>
+                <option value="unit5">Unit 5: The Wonder Bowl</option>
+            </optgroup>
+            <optgroup label="PART 2 TEXTBOOK">
+                <option value="unit6">Unit 6: The Mystery of the Talking Fan</option>
+                <option value="unit7">Unit 7: A Hero of Our Times</option>
+                <option value="unit8">Unit 8: Meadow Surprises</option>
+                <option value="unit9">Unit 9: Fire! Fire!</option>
+                <option value="unit10">Unit 10: The Wonderful World</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-bar">
+        <button onclick="switchTab('qpPanel')">📝 Question Papers (Set A & B)</button>
+        <button onclick="switchTab('lpPanel')" class="secondary">📋 Generate Lesson Plan</button>
+        <button onclick="switchTab('ansPanel')" class="secondary">🔑 Answer Keys</button>
+        <button onclick="switchTab('regPanel')" class="success">📊 Scanner & Marks Register</button>
+        <button onclick="window.print()" style="background:#0f172a;">🖨️ Print Report</button>
+    </div>
+
+    <!-- PANEL 1: QUESTION PAPERS (SET A & B) -->
+    <div id="qpPanel" class="panel active">
+        <h2 id="qpTitle">Question Papers - Select a Chapter above</h2>
+        <div id="qpContent">
+            <p>Please select a chapter from the dropdown list above to view Set A and Set B question papers (15 Marks Written + 5 Marks Oral).</p>
+        </div>
+    </div>
+
+    <!-- PANEL 2: LESSON PLAN -->
+    <div id="lpPanel" class="panel">
+        <h2 id="lpTitle">5E Lesson Plan - Select a Chapter above</h2>
+        <div id="lpContent">
+            <p>Please select a chapter to view the complete 5E lesson plan framework.</p>
+        </div>
+    </div>
+
+    <!-- PANEL 3: ANSWER KEYS -->
+    <div id="ansPanel" class="panel">
+        <h2 id="ansTitle">Answer Keys - Select a Chapter above</h2>
+        <div id="ansContent">
+            <p>Please select a chapter to view the detailed answer key.</p>
+        </div>
+    </div>
+
+    <!-- PANEL 4: MARKS REGISTER & SCANNER -->
+    <div id="regPanel" class="panel">
+        <h2>📊 Digital Scanner & Marks Register</h2>
+        <div style="background:#eff6ff; padding:12px; border-radius:6px; margin-bottom:15px; font-size:0.9rem;">
+            <strong>Scanner & Grading Scale:</strong> Enter student scores (Written /15, Oral /5, Total /20). 
+            Grades map automatically: <strong>0–29 (C), 30–49 (B), 50–69 (B+), 70–89 (A), 90–100 (A+)</strong>. Data is saved locally.
+        </div>
+        <div style="margin-bottom: 12px; display:flex; gap:8px;">
+            <button onclick="addRow()">Add Student</button>
+            <button onclick="saveData()" class="secondary">Save Locally</button>
+        </div>
+        <div style="overflow-x: auto;">
+            <table id="marksTable">
+                <thead>
+                    <tr>
+                        <th>Roll</th>
+                        <th>Student Name</th>
+                        <th>Written (15)</th>
+                        <th>Oral (5)</th>
+                        <th>Total (20)</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Dynamic Rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- BLINKING CREDITS FOOTER -->
+    <div class="credits-footer">
+        Prepared by : LAKSHMIKANTH R (Mob: 9844444871)
+        <span class="sub-credit">ಸಹಕಾರ ಮತ್ತು ಮಾರ್ಗದರ್ಶನ : VENKATARAMANAIAH PRESIDENT KSTPA C N HALLI TALUK TUMKUR DIST</span>
+    </div>
+</div>
+
+<script>
+    const chapterData = {
+        unit1: {
+            name: "Unit 1: Portrait of a Hero",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "What does it mean to be brave? Have you witnessed courage?"</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Read aloud Section I & II. Highlight vocabulary (bravery, adventurous).</td><td>LO-3</td></tr>
+            <tr><td>Explain</td><td>Explain narrative flow and grammar (Proper & Common Nouns).</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Discuss how children show courage in daily life.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Formative assessment via oral queries and LBA items.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Swami fell under the desk and bit: A) Burglar B) Teacher C) Toy D) Ghost<br>2. News of Swami's bravery appeared in: A) Hindu B) Malgudi Times C) Daily News D) Express<br>3. Swami slept beside: A) Granny B) Father C) Mother D) Friend<br>4. Opposite of 'bravery': A) Courage B) Cowardice C) Fearless D) Boldness<br>5. Why was office room punishment? A) Dark B) Used to granny C) Ghosts D) Cold</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What report appeared? 7. Where did Swami hide? 8. What made burglar cry?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. How did father prove courage? 10. Describe nightmare.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Can you prove you have a spine?" a) Who said? b) Meaning? c) Reaction?</p>
+            <p><strong>Oral (5M):</strong> Read descriptive paragraph & answer why we should face fears.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Swami used his __ to bite the burglar: A) Hands B) Teeth C) Feet D) Stick<br>2. The burglar was caught because of: A) Police B) Swami's bite C) Father D) Inspector<br>3. Swami's father worked as a: A) Teacher B) Lawyer C) Doctor D) Banker<br>4. Synonym of 'startled': A) Calm B) Surprised C) Happy D) Sad<br>5. Swami called the office room a: A) Palace B) Haunted house C) Garden D) Classroom</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Who praised Swami? 7. What weapon did burglar hold? 8. Where was newspaper report from?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Why did Swami hate sleeping alone? 10. How did Swami become a hero overnight?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "A frightened boy is a disgrace." a) Who said? b) Context? c) Effect?</p>
+            <p><strong>Oral (5M):</strong> Pronounce key vocabulary words & answer about moral courage.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. A | 2. C | 3. A | 4. B | 5. B<br>Short Answers: Village boy fought tiger / Under desk / Burglar bit leg.<br>Extract: Father to Swami / Courage / Swami reluctant.</p>`
+        },
+        unit2: {
+            name: "Unit 2: The Proud Flowers",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Show garden pictures. Discuss why pride is harmful.</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Recite poem with rhythm. Identify rhyming words.</td><td>LO-4</td></tr>
+            <tr><td>Explain</td><td>Discuss humility vs pride. Explain poetic devices.</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Relate message to human relationships.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Oral recitation check & comprehension questions.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Flowers were proud of: A) Fragrance B) Beauty C) Roots D) Leaves<br>2. Who comforted drooping flowers? A) Gardener B) Rain & breeze C) Birds D) Sun<br>3. Opposite of 'proud': A) Humble B) Arrogant C) Vain D) Boastful<br>4. What happened in storm? A) Stood tall B) Drooped C) Flew D) Gold<br>5. Message: A) Beauty fades B) Humility valued C) Water needed D) Gardens pretty</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. How did flowers behave? 7. What caused sorrow? 8. Name two flowers.</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe attitude before storm. 10. How did nature teach humility?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "They talked of beauty and put on airs..." a) Who? b) Meaning? c) Why discouraged?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 1 & answer why modesty is a virtue.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The garden flowers looked down upon: A) Trees B) Modest plants C) Birds D) Rocks<br>2. When rain fell, the flowers: A) Rejoiced B) Hung their heads C) Sang D) Grew taller<br>3. Synonym of 'modest': A) Proud B) Humble C) Loud D) Boastful<br>4. The weather condition described is: A) Gentle breeze and rain B) Drought C) Snow D) Earthquake<br>5. The poem teaches us that: A) Pride goes before a fall B) Flowers don't talk C) Gardens need fences D) Rain is bad</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Who visited the garden? 7. Why did flowers boast? 8. What is the tone of the poem?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Contrast proud flowers with modest ones. 10. Moral lesson of the poem.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "We are the brightest in the bed!" a) Who said? b) To whom? c) Outcome?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 2 & explain why arrogance fails.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. A | 4. B | 5. B<br>Short Answers: Boasted / Heavy rain / Rose & Lily.<br>Extract: Proud flowers / Arrogant behavior / Leads to sorrow.</p>`
+        },
+        unit3: {
+            name: "Unit 3: The Emperor's New Clothes",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "Have you pretended to understand something?" Introduce tale.</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Role-play Act I & II. Focus on dialogue and vocabulary.</td><td>LO-3</td></tr>
+            <tr><td>Explain</td><td>Discuss vanity and peer pressure. Review past tense.</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Discuss how speaking truth requires courage.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Comprehension quiz and character analysis.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Swindlers claimed cloth was invisible to: A) Wise B) Foolish/unfit C) Rich D) Honest<br>2. What were swindlers doing? A) Weaving silk B) Nothing (empty looms) C) Sewing gold D) Knitting<br>3. Who spoke truth? A) Minister B) Child C) Old woman D) Emperor<br>4. Opposite of 'foolish': A) Silly B) Wise C) Stupid D) Dumb<br>5. Why did ministers pretend? A) Saw it B) Feared looking unfit C) Colorful D) Bribed</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What did Emperor love? 7. How much gold demanded? 8. What child shouted?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe how swindlers cheated. 10. Why did crowd keep quiet?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "But he has nothing on at all!" a) Who uttered? b) Why quiet before? c) Moral lesson?</p>
+            <p><strong>Oral (5M):</strong> Read dialogue & answer why honesty is better than imitation.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The Emperor was extremely fond of: A) Fighting wars B) New clothes C) Eating sweets D) Sleeping<br>2. The swindlers pretended to be: A) Tailors/weavers B) Painters C) Ministers D) Farmers<br>3. The old minister sent by Emperor saw: A) Beautiful cloth B) Nothing on the looms C) Gold threads D) Patterns<br>4. Synonym of 'magnificent': A) Ugly B) Splendid C) Tiny D) Plain<br>5. In the end, the Emperor: A) Punished swindlers B) Walked in procession anyway C) Ran away D) Cried</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Who accompanied Emperor in procession? 7. What did swindlers take away? 8. Why did people praise invisible clothes?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Role of the ministers in the story. 10. Significance of the child's remark.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Magnificent! What a pattern!" a) Who said? b) To whom? c) Truth behind it?</p>
+            <p><strong>Oral (5M):</strong> Recite dialogue & discuss dangers of vanity.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. B | 5. B<br>Short Answers: Fine clothes / Gold / "Emperor has nothing on!"<br>Extract: Child / Fear of ridicule / Speak truth fearlessly.</p>`
+        },
+        unit4: {
+            name: "Unit 4: The Miller of Dee",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "Who is happier—rich with worries or poor with peace?"</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Choral reading of poem. Analyze rhythm and rhyme.</td><td>LO-4</td></tr>
+            <tr><td>Explain</td><td>Discuss conversation between King and Miller. Theme of peace.</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Discuss why simplicity brings mental peace.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Recitation test and comprehension check.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Miller lived by River: A) Thames B) Dee C) Ganges D) Severn<br>2. How did miller feel? A) Sad B) Blithe and happy C) Angry D) Jealous<br>3. Who visited miller? A) Merchant B) King C) Soldier D) Farmer<br>4. Opposite of 'blithe': A) Cheerful B) Sorrowful C) Joyful D) Bright<br>5. What did miller say about money? A) Owed a lot B) Owed nobody C) King owed D) Borrowed</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What work did miller do? 7. Why King envied? 8. What song did he sing?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe conversation between King and miller. 10. Why did miller claim happiness?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "I envy nobody, no, not I..." a) Who said? b) Why? c) Character trait?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 1 & answer how honest work brings peace.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The King who visited the miller was: A) King Cole B) King Hal C) King Arthur D) King Lear<br>2. The miller's mill was driven by: A) Electricity B) River water C) Wind D) Animals<br>3. Synonym of 'envy': A) Jealousy B) Praise C) Love D) Kindness<br>4. The King admitted that his crown: A) Brought him great sleep B) Brought cares and worries C) Made him poor D) Was heavy<br>5. The central theme of the poem is: A) Hard work B) Contentment is true wealth C) Rivers are useful D) Kings are wise</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What did King wear? 7. How did miller greet King? 8. What did King wish?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Contrast King's life with miller's life. 10. Moral of the poem.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Thou'rt wrong, my friend!" a) Who said? b) To whom? c) Context?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 2 & explain the value of contentment.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. B | 5. B<br>Short Answers: Ground corn / Peaceful without worries / Sang about envying nobody.<br>Extract: Miller / Content with simple life / Freedom from greed.</p>`
+        },
+        unit5: {
+            name: "Unit 5: The Wonder Bowl",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "Have you helped a stranger or shared a meal?"</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Read paragraphs 1-4. Highlight vocabulary (mound, hooted, ragged).</td><td>LO-3</td></tr>
+            <tr><td>Explain</td><td>Discuss hospitality and grammar (Adverbs & Adjectives).</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Connect story themes to community values and kindness.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Formative assessment via oral and written items.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Philemon and Baucis lived in a: A) Mansion B) Hut C) Palace D) Castle<br>2. What did Baucis place on table? A) Tea B) Small bowl of milk C) Bread D) Rice<br>3. When guests drank, Baucis was astonished because: A) Emptied B) Refilled with milk C) Broke D) Water<br>4. Opposite of 'earlier': A) Sooner B) Faster C) Later D) Quicker<br>5. Final wish of Philemon and Baucis: A) Rich B) Farm C) To die together D) Travel</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Why did boys hoot? 7. What did they conclude strangers were? 8. What did cottage turn into?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe how they welcomed strangers. 10. Why couldn't they sleep?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Your kindness makes this drink a feast..." a) Who said to whom? b) Drink referred? c) Value?</p>
+            <p><strong>Oral (5M):</strong> Read passage & answer why hospitality is important.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The old couple in the story were known for their: A) Greed B) Hospitality and kindness C) Wealth D) Anger<br>2. The strangers who visited them were actually: A) Beggars B) Gods in disguise (Jupiter and Mercury) C) Thieves D. Merchants<br>3. Synonym of 'ragged': A) Neat B) Torn and worn C) Clean D) Expensive<br>4. The village where they lived was punished because: A) It was small B) People were inhospitable C. It rained D) No food grew<br>5. The moral of the story is: A) Share with strangers B) Hospitality and kindness are rewarded C) Milk is healthy D) Old people live in huts</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What happened to the wicked villagers' homes? 7. What did Baucis offer besides milk? 8. How did the couple treat their guests?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Transformation of the cottage into a temple/mansion. 10. Character sketch of Philemon and Baucis.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Ask what you will, and it shall be granted." a) Who said? b) To whom? c) What was their wish?</p>
+            <p><strong>Oral (5M):</strong> Recite moral & explain the reward of kindness.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. C | 5. C<br>Short Answers: Ragged clothes / Angels / Grand mansion.<br>Extract: Guest to Baucis / Small bowl of milk / Generosity and gratitude.</p>`
+        },
+        unit6: {
+            name: "Unit 6: The Mystery of the Talking Fan",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask students about household appliances and sounds they make.</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Read poem aloud. Focus on onomatopoeia and sound words.</td><td>LO-4</td></tr>
+            <tr><td>Explain</td><td>Discuss personification of the electric fan. Review verbs.</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Talk about curiosity and finding mystery in ordinary objects.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Comprehension check and poem recitation.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The talking fan made a noise like: A) Whistle B) Chatter C) Roar D) Ring<br>2. What was wrong with the fan? A) It was broken B) It needed electrical oil C) It was new D) It was painted<br>3. Synonym of 'chatter': A) Silence B) Talk rapidly C) Cry D) Sing<br>4. Who fixed the fan? A) An electrician B) Nobody C) The poet D) The mother<br>5. The tone of the poem is: A) Sad B) Humorous and curious C) Angry D) Fearful</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Why did the fan 'talk'? 7. What happened when it was oiled? 8. What sound did it make initially?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe the mystery of the fan as presented by the poet. 10. How did the fan behave after being oiled?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "He all a-datailed ran..." a) Who is 'he' here? b) What was his problem? c) How was it solved?</p>
+            <p><strong>Oral (5M):</strong> Recite the poem with proper rhythm and expression.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The poet of 'The Mystery of the Talking Fan' is: A) Maude Rubin B) Rabindranath Tagore C) Wordsworth D) Ruskin Bond<br>2. The fan's chatter was compared to: A) Human talk B) Bird chirping C) Engine noise D) Music<br>3. Opposite of 'noisy': A) Loud B) Quiet C) Fast D) Bright<br>4. The fan became silent because: A) Motor stopped B) It was oiled properly C) Electricity went off D) It was switched off<br>5. What object is personified in the poem? A) Door B) Fan C) Clock D) Chair</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Could anyone understand the fan? 7. What does 'mysterious chatter' mean? 8. Where was the fan located?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Explain personification used in the poem. 10. Central idea of the poem.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "I couldn't quite make out what he said..." a) Who couldn't make out? b) What was being said? c) Why?</p>
+            <p><strong>Oral (5M):</strong> Orally answer: Why do machines make noise when dry?</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. A | 5. B<br>Short Answers: Electrical noise / Became silent / Chatter.<br>Extract: The electric fan / Needed oil / Oiled by electrician.</p>`
+        },
+        unit7: {
+            name: "Unit 7: A Hero of Our Times",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "What qualities make someone a true hero in real life?"</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Read text segments. Highlight heroic deeds and sacrifice vocabulary.</td><td>LO-3</td></tr>
+            <tr><td>Explain</td><td>Discuss bravery, social responsibility, and grammar (Adjectives).</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Share real-life examples of brave children awarded by the government.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Comprehension questions and written paragraph assessment.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. A true hero is someone who: A) Seeks fame B) Saves lives selflessly C) Is rich D) Is strong<br>2. Bravery awards are usually given on: A) Independence Day B) Republic Day C) Gandhi Jayanti D) Teachers Day<br>3. Synonym of 'courage': A) Fear B) Bravery C) Cowardice D) Weakness<br>4. What motivates a real hero? A) Money B) Compassion and duty C) Medals D) Fear<br>5. The opposite of 'selfless' is: A) Brave B) Selfish C) Kind D) Bold</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Name a quality of a hero. 7. Why do we celebrate heroes? 8. How do children show bravery?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe an act of bravery mentioned or discussed. 10. Why is moral courage as important as physical courage?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "True courage is found in the heart, not in muscle." a) Meaning of this statement? b) Who demonstrates it? c) Value highlighted?</p>
+            <p><strong>Oral (5M):</strong> Read passage & speak on 'My favourite real-life hero'.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Acts of exceptional bravery by children are recognized by: A) School B) National Bravery Awards C) Sports club D) Village panchayat<br>2. Which of these is an act of heroism? A) Running away B) Saving someone from drowning C) Hiding D) Crying<br>3. Opposite of 'danger': A) Risk B) Safety C) Fear D) Harm<br>4. A hero acts without thinking of: A) Their own safety B) Others C) Duty D) Help<br>5. The text emphasizes that heroes are: A) Ordinary people doing extraordinary things B) Giants C) Kings D) Soldiers only</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What inspires ordinary people to be brave? 7. What is National Bravery Award? 8. Define heroism in one sentence.</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. How does quick thinking save lives during emergencies? 10. Role of youth in community safety.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "He risked his life without a second thought." a) Who is praised? b) What did he do? c) What does it show?</p>
+            <p><strong>Oral (5M):</strong> Orally answer: How can students help during natural disasters?</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. B | 5. B<br>Short Answers: Selflessness / To inspire others / Helping in danger.<br>Extract: Brave individual / Saved someone / Extreme selflessness and courage.</p>`
+        },
+        unit8: {
+            name: "Unit 8: Meadow Surprises",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "Have you walked through a grassy meadow? What did you notice?"</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Read poem with expression. Identify insects, flowers, and natural sights.</td><td>LO-4</td></tr>
+            <tr><td>Explain</td><td>Discuss biodiversity in meadows. Review prepositions.</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Connect nature observation to environmental conservation.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Poem comprehension and recitation test.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. Meadows have surprises if you have: A) Money B) Soft and furry things / observant eyes C) A map D) Shoes<br>2. What can you step on in a meadow? A) Concrete B) Velvet grass C) Plastic D) Stones<br>3. Synonym of 'meadow': A) Desert B) Grassland C) Mountain D) City<br>4. Who builds houses in meadows? A) Birds and ants B) Lions C) Fish D) Monkeys<br>5. The opposite of 'wild': A) Domesticated / tame B) Fierce C) Natural D) Free</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Name two creatures found in meadows. 7. What is velvet grass? 8. What surprises do meadows hold?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe the beauty of a meadow as told in the poem. 10. How can we discover meadow surprises?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Oh! Meadows have surprises..." a) What kind of surprises? b) Who can find them? c) Poetic device?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 1 & describe creatures living in grass.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. You may see a butterfly __ upon a flower: A) Sleeping B) Resting / drinking nectar C) Flying away D) Eating<br>2. Rabbit's ears can be seen when: A) It runs B) It hops / startles C) It hides D) It sleeps<br>3. Synonym of 'surprise': A) Wonder B) Expected C) Boring D) Old<br>4. Dandelions in a meadow turn into: A) Gold coins B) Airy parachutes C) Trees D) Stones<br>5. The poet wants us to: A) Ignore nature B) Observe nature closely C) Build houses D. Cut grass</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What is a dandelion? 7. Why should we walk softly in meadows? 8. Name a bird found in meadows.</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Explain how dandelion seeds fly away. 10. Why are meadows important for nature?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "You may disturb a rabbit..." a) Where? b) Why? c) How does it react?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 2 & explain why nature observation is joyful.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. B | 5. B<br>Short Answers: Butterflies & rabbits / Soft grass / Hidden nests & insects.<br>Extract: Nature surprises / Patient observers / Personification/Imagery.</p>`
+        },
+        unit9: {
+            name: "Unit 9: Fire! Fire!",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "What do we do if a fire breaks out in school or home?"</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Read story/prose on fire safety. Highlight vocabulary (blaze, rescue, emergency).</td><td>LO-3</td></tr>
+            <tr><td>Explain</td><td>Discuss fire safety rules and emergency numbers (101). Review modals.</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Conduct a mock fire safety drill discussion in class.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Comprehension check and safety rules quiz.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The emergency telephone number for fire brigade in India is: A) 100 B) 101 C) 108 D) 102<br>2. Fire needs three things to burn: fuel, heat, and: A) Water B) Oxygen C) Nitrogen D) Sand<br>3. Opposite of 'danger': A) Risk B) Safety C) Harm D) Blaze<br>4. What should you do if your clothes catch fire? A) Run fast B) Stop, drop, and roll C) Shout D) Hide<br>5. Firefighters use __ to put out fires: A) Sand only B) Water hoses and chemical extinguishers C) Wind D. Blankets</p>
+            <p><strong>II. ShortAnswers (3M):</strong> 6. How do fires start accidentally? 7. What is a fire extinguisher? 8. Why should we not play with matches?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe the role of firefighters during an emergency. 10. List four important fire safety rules at home.</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Fire is a good servant but a bad master." a) Meaning of this saying? b) When is it useful? c) When is it dangerous?</p>
+            <p><strong>Oral (5M):</strong> Orally explain what to do if smoke fills your room.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. If you smell gas leakage in the kitchen, you should: A) Light a match B) Turn off gas knob and open windows C) Sleep D) Spray water<br>2. Firefighters wear special suits made of: A) Cotton B) Fire-resistant material C) Silk D) Wool<br>3. Synonym of 'blaze': A) Darkness B) Bright fierce fire C) Cold D) Water<br>4. During a fire alarm in school, students should: A) Push each other B) Walk calmly in a single line to assembly point C) Stay in class D) Run outside screaming<br>5. Which of these is inflammable? A) Water B) Petrol C) Glass D. Stone</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Who is a firefighter? 7. Why is electrical short circuit dangerous? 8. What is a smoke alarm?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe how a fire engine operates. 10. What immediate steps should be taken during a minor kitchen fire?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Quick action saved many lives." a) What situation is referred to? b) Whose quick action? c) Result?</p>
+            <p><strong>Oral (5M):</strong> Orally recite emergency contact numbers & safety drills.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. B | 5. B<br>Short Answers: Short circuits/matches / Device to put out fire / Causes burns.<br>Extract: Fire outbreak / Firefighters and alert citizens / Lives saved safely.</p>`
+        },
+        unit10: {
+            name: "Unit 10: The Wonderful World",
+            lp: `<table><tr><th>Phase</th><th>Teacher Activity</th><th>LO</th></tr>
+            <tr><td>Engage</td><td>Ask: "How big is the world? What makes nature wonderful?"</td><td>LO-11</td></tr>
+            <tr><td>Explore</td><td>Read poem aloud. Focus on imagery of earth, air, and sky.</td><td>LO-4</td></tr>
+            <tr><td>Explain</td><td>Discuss appreciation of nature, grand scale of earth, and grammar (Adverbs).</td><td>LO-36</td></tr>
+            <tr><td>Elaborate</td><td>Encourage students to express wonder for nature and protect the environment.</td><td>LO-13</td></tr>
+            <tr><td>Evaluate</td><td>Poem recitation and written comprehension.</td><td>LO-1</td></tr></table>`,
+            setA: `<h3>SET A (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The earth is described in the poem as: A) Small B) Friendly and wonderful C) Ugly D) Empty<br>2. What wraps around the earth like a garment? A) Water B) The friendly air C) Mountains D) Forests<br>3. Opposite of 'wonderful': A) Amazing B) Terrible / ordinary C) Beautiful D) Grand<br>4. What supports man on its friendly breast? A) The ocean B) The earth C) The sky D) The sun<br>5. The poet feels __ towards the world: A) Afraid B) Grateful and amazed C) Angry D) Indifferent</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. What is the sky compared to? 7. How does air treat the earth? 8. What is man's relation to earth?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Describe the grandeur of the world as depicted in the poem. 10. Why does the poet call the world 'wonderful'?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "Great, wide, beautiful, wonderful World..." a) Which poem is this from? b) What are the qualities mentioned? c) Tone of poet?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 1 with feeling and expression.</p>`,
+            setB: `<h3>SET B (15 Marks Written + 5 Marks Oral)</h3>
+            <p><strong>I. MCQs (5M):</strong><br>1. The water takes to the dark green __: A) Desert B) Woods / ocean C) Mountains D) City<br>2. The grass is upon the earth's: A) Head B) Face C) Feet D) Hands<br>3. Synonym of 'wide': A) Narrow B) Broad C) Small D) Short<br>4. The sky is __ above the earth: A) Below B) Over-arching C) Underground D) Far away<br>5. The poem teaches us to: A) Destroy earth B) Admire and respect nature C) Travel everywhere D) Build houses</p>
+            <p><strong>II. Short Answers (3M):</strong> 6. Who wrote 'Great, Wide, Beautiful, Wonderful World'? 7. How is grass described? 8. What surrounds the earth?</p>
+            <p><strong>III. Paragraph (4M):</strong> 9. Explain the imagery of sky and water in the poem. 10. Why is human being small compared to earth?</p>
+            <p><strong>IV. Extract (3M):</strong> 11. "You are so great, and I am so small..." a) Who is speaking to whom? b) Meaning? c) Feeling expressed?</p>
+            <p><strong>Oral (5M):</strong> Recite stanza 2 & express love for nature.</p>`,
+            ans: `<p><strong>Set A & B Key Answers:</strong><br>MCQs: 1. B | 2. B | 3. B | 4. B | 5. B<br>Short Answers: Roof/over-arching / Wraps around / Supported on its breast.<br>Extract: Great Wide Beautiful World / Wide and wonderful / Full of awe and wonder.</p>`
+        }
+    };
+
+    function loadChapterContent() {
+        const val = document.getElementById('chapterSelect').value;
+        if (!val) return;
+        const data = chapterData[val];
+        
+        document.getElementById('qpTitle').innerText = data.name + " - Question Papers (Set A & B)";
+        document.getElementById('qpContent').innerHTML = data.setA + "<hr style='margin:20px 0; border:1px dashed #cbd5e1;'>" + data.setB;
+        
+        document.getElementById('lpTitle').innerText = data.name + " - 5E Lesson Plan";
+        document.getElementById('lpContent').innerHTML = data.lp;
+        
+        document.getElementById('ansTitle').innerText = data.name + " - Answer Keys";
+        document.getElementById('ansContent').innerHTML = data.ans;
+        
+        switchTab('qpPanel');
+    }
+
+    function switchTab(panelId) {
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        document.getElementById(panelId).classList.add('active');
+    }
+
+    const defaultStudents = [
+        { roll: 101, name: "Student A", written: 14, oral: 5 },
+        { roll: 102, name: "Student B", written: 12, oral: 4 },
+        { roll: 103, name: "Student C", written: 15, oral: 5 },
+        { roll: 104, name: "Student D", written: 9, oral: 3 },
+        { roll: 105, name: "Student E", written: 6, oral: 2 }
+    ];
+
+    function loadMarks() {
+        const saved = localStorage.getItem('dsert_portal_marks_all');
+        const data = saved ? JSON.parse(saved) : defaultStudents;
+        const tbody = document.getElementById('tableBody');
+        tbody.innerHTML = '';
+        data.forEach(s => addRowToDOM(s.roll, s.name, s.written, s.oral));
+    }
+
+    function addRowToDOM(roll, name, written, oral) {
+        const tbody = document.getElementById('tableBody');
+        const tr = document.createElement('tr');
+        const total = Number(written) + Number(oral);
+        const pct = (total / 20) * 100;
+        
+        let grade = 'C';
+        if (pct >= 90) grade = 'A+';
+        else if (pct >= 70) grade = 'A';
+        else if (pct >= 50) grade = 'B+';
+        else if (pct >= 30) grade = 'B';
+        else grade = 'C';
+
+        tr.innerHTML = `
+            <td><input type="number" value="${roll}" class="roll-input" oninput="saveData()" style="width:50px;"></td>
+            <td><input type="text" value="${name}" class="name-input" oninput="saveData()" style="width:110px;"></td>
+            <td><input type="number" value="${written}" min="0" max="15" oninput="updateRow(this)" style="width:50px;"></td>
+            <td><input type="number" value="${oral}" min="0" max="5" oninput="updateRow(this)" style="width:50px;"></td>
+            <td>${total}</td>
+            <td>${pct.toFixed(0)}%</td>
+            <td style="font-weight:bold; color:#1e3a8a;">${grade}</td>
+            <td><button style="padding:2px 6px; background:#ef4444; font-size:11px;" onclick="this.closest('tr').remove(); saveData();">X</button></td>
+        `;
+        tbody.appendChild(tr);
+    }
+
+    function addRow() {
+        const tbody = document.getElementById('tableBody');
+        const nextRoll = tbody.rows.length > 0 ? parseInt(tbody.rows[tbody.rows.length - 1].querySelector('.roll-input').value) + 1 : 101;
+        addRowToDOM(nextRoll, 'New Student', 10, 4);
+        saveData();
+    }
+
+    function updateRow(el) {
+        const tr = el.closest('tr');
+        const w = parseFloat(tr.cells[2].querySelector('input').value) || 0;
+        const o = parseFloat(tr.cells[3].querySelector('input').value) || 0;
+        const total = w + o;
+        const pct = (total / 20) * 100;
+        
+        let grade = 'C';
+        if (pct >= 90) grade = 'A+';
+        else if (pct >= 70) grade = 'A';
+        else if (pct >= 50) grade = 'B+';
+        else if (pct >= 30) grade = 'B';
+        else grade = 'C';
+
+        tr.cells[4].innerText = total;
+        tr.cells[5].innerText = pct.toFixed(0) + '%';
+        tr.cells[6].innerText = grade;
+        saveData();
+    }
+
+    function saveData() {
+        const rows = document.querySelectorAll('#tableBody tr');
+        const data = [];
+        rows.forEach(tr => {
+            data.push({
+                roll: tr.querySelector('.roll-input').value,
+                name: tr.querySelector('.name-input').value,
+                written: tr.querySelector('td:nth-child(3) input').value,
+                oral: tr.querySelector('td:nth-child(4) input').value
+            });
+        });
+        localStorage.setItem('dsert_portal_marks_all', JSON.stringify(data));
+    }
+
+    window.onload = loadMarks;
+</script>
+
+</body>
+</html>
